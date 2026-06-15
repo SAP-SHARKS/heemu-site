@@ -477,15 +477,12 @@ nav {
 .gallery-item {
   display: flex; flex-direction: column; align-items: center; max-width: 280px;
 }
-/* Desktop: phone first, caption second */
-.gallery-item .phone { order: 1; }
-.gallery-caption { order: 2; text-align: center; margin-top: 20px; }
+/* Caption always on top, phone always below */
+.gallery-caption { order: 1; text-align: center; margin-bottom: 20px; }
+.gallery-item .phone { order: 2; }
 
-/* Mobile: caption first, phone second */
 @media (max-width: 600px) {
   .gallery-item { width: 100%; max-width: 320px; }
-  .gallery-item .phone { order: 2; }
-  .gallery-caption { order: 1; margin-top: 0; margin-bottom: 16px; }
 }
 .gallery-caption h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin-bottom: 4px; }
 .gallery-caption p { font-size: 13px; color: var(--muted); }
@@ -724,8 +721,8 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
         <p>Tap to count beautiful Islamic remembrances. Each pause becomes an act of worship, building daily streaks and growing your dhikr habit naturally.</p>
         <p>Track your SubhanAllah, Alhamdulillah, and Allahu Akbar counts across the day. Watch your streak grow with every mindful moment.</p>
         <div class="feature-pills">
-          <span class="feature-pill">Tap counter</span>
-          <span class="feature-pill">Daily streaks</span>
+          <span class="feature-pill">Tap Counter</span>
+          <span class="feature-pill">Daily Streaks</span>
           <span class="feature-pill">SubhanAllah</span>
         </div>
       </div>
@@ -749,8 +746,8 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
         <p>Powered by the quran.com API with beautiful Uthmani script and word by word translations. Every distraction becomes a connection with Allah's words.</p>
         <div class="feature-pills">
           <span class="feature-pill">quran.com API</span>
-          <span class="feature-pill">Auto bookmark</span>
-          <span class="feature-pill">Word by word</span>
+          <span class="feature-pill">Auto Bookmark</span>
+          <span class="feature-pill">Word By Word</span>
         </div>
       </div>
     </div>
@@ -762,9 +759,9 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
         <p>See your dhikr count, day streak, screen time saved, and most limited apps in a beautiful calm dashboard. Small consistent steps build lasting habits.</p>
         <p>The Prophet &#x2611;&#xFE0F; said: "The most beloved deeds to Allah are the most consistent, even if small."</p>
         <div class="feature-pills">
-          <span class="feature-pill">22 day streak</span>
-          <span class="feature-pill">647 ayat recited</span>
-          <span class="feature-pill">Daily insights</span>
+          <span class="feature-pill">22 Day Streak</span>
+          <span class="feature-pill">647 Ayat Recited</span>
+          <span class="feature-pill">Daily Insights</span>
         </div>
       </div>
       <div class="feature-phone-side">
