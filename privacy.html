@@ -12,83 +12,103 @@
     padding: 20px;
     line-height: 1.6;
     color: #1A1A1A;
-    background: #FDF8F4;
+    background: #FAF5EE;
   }
-  h1 { color: #1DB954; border-bottom: 2px solid #1DB954; padding-bottom: 10px; }
+  h1 { color: #10B981; border-bottom: 2px solid #10B981; padding-bottom: 10px; }
   h2 { color: #1A1A1A; margin-top: 30px; }
   .last-updated { color: #666; font-style: italic; }
   .contact { background: #fff; padding: 15px; border-radius: 8px; margin-top: 30px; }
-  a { color: #1DB954; }
+  a { color: #10B981; }
 </style>
 </head>
 <body>
 
 <h1>Privacy Policy — Heemu</h1>
-<p class="last-updated">Last Updated: May 12, 2026</p>
+<p class="last-updated">Last Updated: July 24, 2026</p>
 
 <p>Heemu ("we", "our", or "us") is a digital wellness application developed by SAP-SHARKS. This Privacy Policy explains how we collect, use, and protect your information when you use our Android application.</p>
 
-<h2>1. Information We Collect</h2>
-<p><strong>Information You Provide:</strong></p>
+<h2>1. Account and Sign In</h2>
+<p>Heemu requires you to sign in with a Quran.com account to use the app. When you sign in, Quran.com shares your basic account identifiers with us so we can create your Heemu profile. Your Quran.com password is never seen or stored by Heemu.</p>
+
+<h2>2. Information We Collect</h2>
+
+<p><strong>Information you provide:</strong></p>
 <ul>
-  <li>Gender preference (used for theme customization)</li>
-  <li>App usage preferences (intervention mode, pause duration, theme color)</li>
-  <li>List of apps you choose to limit</li>
-  <li>Account information (if you sign in)</li>
+  <li>Account identifiers received from Quran.com when you sign in (such as your user ID and email address)</li>
+  <li>Gender preference, used for theme customisation</li>
+  <li>App preferences such as intervention mode and pause duration</li>
+  <li>The list of apps you choose to limit</li>
+  <li>Goals you create in the app</li>
 </ul>
 
-<p><strong>Information Collected Automatically:</strong></p>
+<p><strong>Information collected automatically:</strong></p>
 <ul>
-  <li>App usage statistics (which apps you open and for how long) — used only for screen time analytics shown to you</li>
-  <li>Dhikr count and streak data (stored locally)</li>
-  <li>Crash reports and basic device information</li>
+  <li>Which of your selected apps you open, and when an intervention screen was shown to you</li>
+  <li>Dhikr counts and streaks</li>
+  <li>Screen time statistics for the apps you have selected</li>
+  <li>Basic device information and crash reports</li>
 </ul>
 
-<h2>2. Permissions We Use</h2>
+<h2>3. Permissions We Use</h2>
 
-<p><strong>Accessibility Service:</strong> Heemu uses Android's Accessibility Service to detect when you open an app you have chosen to limit. We use this <em>only</em> to display the intervention screen (Dhikr or Quran verse). We do <strong>not</strong> read screen content, capture keystrokes, or monitor any activity beyond detecting which app is in the foreground.</p>
+<p><strong>Accessibility Service:</strong> Heemu uses Android's Accessibility Service to detect when you open an app you have chosen to limit. We use this <em>only</em> to know which app is currently in the foreground so we can display the intervention screen. We do <strong>not</strong> read screen content, capture keystrokes, collect text you type, or monitor any activity beyond identifying the app in the foreground.</p>
 
-<p><strong>Usage Stats Permission:</strong> Used to show you statistics about your screen time. This data stays on your device.</p>
+<p><strong>Usage Access (PACKAGE_USAGE_STATS):</strong> Used to show you statistics about your screen time.</p>
 
-<h2>3. How We Use Your Information</h2>
+<p><strong>Query all packages:</strong> Used to show you the list of apps installed on your device so you can choose which ones to limit. This list is used on your device to build that screen and is not uploaded to our servers.</p>
+
+<p><strong>Display over other apps:</strong> Used to show the intervention screen on top of the app you opened.</p>
+
+<h2>4. How We Use Your Information</h2>
 <ul>
-  <li>To provide the core app blocking and intervention functionality</li>
-  <li>To personalize your experience (themes, intervention type)</li>
-  <li>To show you your usage statistics and progress</li>
+  <li>To provide the core app limiting and intervention functionality</li>
+  <li>To personalise your experience</li>
+  <li>To show you your statistics, streaks and progress, and to keep them available when you reinstall the app or sign in on another device</li>
   <li>To improve the app and fix bugs</li>
 </ul>
 
-<h2>4. Data Storage</h2>
-<p>Most of your data (preferences, dhikr count, app list) is stored <strong>locally on your device</strong> using Android's SharedPreferences and Hive database.</p>
-<p>If you create an account, basic account data (email, preferences) is stored securely on Supabase servers (an encrypted PostgreSQL backend).</p>
+<h2>5. Where Your Data Is Stored</h2>
+<p>Your preferences, the list of apps you limit, and cached Quran content are stored <strong>on your device</strong>.</p>
+<p>The following are stored on our servers, hosted by Supabase, and linked to your account:</p>
+<ul>
+  <li>Your profile record</li>
+  <li>Goals you create</li>
+  <li>Dhikr logs</li>
+  <li>Intervention events, which record that an intervention was shown and for which app</li>
+</ul>
 
-<h2>5. Data Sharing</h2>
-<p>We do <strong>not</strong> sell, trade, or share your personal information with third parties for marketing purposes.</p>
+<h2>6. Data Sharing</h2>
+<p>We do <strong>not</strong> sell or trade your personal information, and we do not share it with third parties for advertising or marketing purposes.</p>
 <p>We use the following third-party services:</p>
 <ul>
-  <li><strong>Supabase</strong> — for account and backend services (only if you sign in)</li>
-  <li><strong>Google Play Services</strong> — for app distribution and crash reporting</li>
-  <li><strong>quran.com API</strong> — to fetch Quran verses (no personal data is sent)</li>
+  <li><strong>Supabase</strong> — hosts our database and authentication</li>
+  <li><strong>Quran.com</strong> — provides sign in and supplies Quran verses and translations</li>
+  <li><strong>Google Play Services</strong> — app distribution and updates</li>
 </ul>
 
-<h2>6. Children's Privacy</h2>
-<p>Heemu is suitable for all ages but is not directed specifically at children under 13. We do not knowingly collect personal information from children under 13.</p>
+<h2>7. Data Retention and Deletion</h2>
+<p>We keep your account data for as long as your account exists. You can request deletion of your account and all associated server data at any time. Instructions are on our <a href="delete-account.html">account deletion page</a>.</p>
+<p>Uninstalling the app removes the data stored on your device, but does not delete data stored on our servers. To remove that, follow the account deletion instructions.</p>
 
-<h2>7. Your Rights</h2>
+<h2>8. Age Requirement</h2>
+<p>Heemu is intended for users aged 18 and over. We do not knowingly collect personal information from children.</p>
+
+<h2>9. Your Rights</h2>
 <ul>
-  <li>You can uninstall the app at any time, which removes all locally stored data</li>
-  <li>You can revoke Accessibility and Usage permissions in your phone's settings</li>
-  <li>You can request deletion of your account data by contacting us</li>
+  <li>You can request a copy of your data, or its deletion, by contacting us</li>
+  <li>You can revoke Accessibility and Usage Access permissions at any time in your phone's settings</li>
+  <li>You can uninstall the app at any time</li>
 </ul>
 
-<h2>8. Security</h2>
-<p>We take reasonable measures to protect your information. Data transmitted to our servers is encrypted using HTTPS. However, no method of transmission over the internet is 100% secure.</p>
+<h2>10. Security</h2>
+<p>Data transmitted between the app and our servers is encrypted using HTTPS. We take reasonable measures to protect your information, though no method of transmission over the internet is completely secure.</p>
 
-<h2>9. Changes to This Policy</h2>
+<h2>11. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date.</p>
 
 <div class="contact">
-<h2>10. Contact Us</h2>
+<h2>12. Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact:</p>
 <p>
   <strong>SAP-SHARKS</strong><br>
