@@ -3,68 +3,283 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delete Your Account — Heemu</title>
+<title>Delete Your Account | Heemu</title>
+<meta name="description" content="How to request deletion of your Heemu account and the data linked to it.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    line-height: 1.6;
-    color: #1A1A1A;
-    background: #FAF5EE;
-  }
-  h1 { color: #10B981; border-bottom: 2px solid #10B981; padding-bottom: 10px; }
-  h2 { color: #1A1A1A; margin-top: 30px; }
-  .last-updated { color: #666; font-style: italic; }
-  .steps { background: #fff; padding: 20px; border-radius: 8px; }
-  .contact { background: #fff; padding: 15px; border-radius: 8px; margin-top: 30px; }
-  a { color: #10B981; }
-  code { background: #EFE8DE; padding: 2px 6px; border-radius: 4px; }
+:root {
+  --emerald: #1DB954;
+  --emerald-dark: #2E7D6F;
+  --cream: #FDF8F4;
+  --cream-dark: #F5EFE6;
+  --ink: #1A1A1A;
+  --ink-soft: #333333;
+  --muted: #666666;
+  --surface: #FFFFFF;
+  --warn: #E74C3C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  padding: 20px 0;
+  background: rgba(253, 248, 244, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(29, 185, 84, 0.08);
+}
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 32px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 600;
+  color: var(--ink); text-decoration: none;
+}
+.logo-img {
+  width: 36px; height: 36px; border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+.nav-back {
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  padding: 8px 16px; border-radius: 100px;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  transition: all 0.2s;
+}
+.nav-back:hover { background: var(--ink); color: var(--cream); }
+
+/* HEADER */
+.page-header { padding: 72px 32px 24px; text-align: center; }
+.page-header-container { max-width: 760px; margin: 0 auto; }
+.page-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(231, 76, 60, 0.08);
+  border: 1px solid rgba(231, 76, 60, 0.25);
+  padding: 8px 16px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  color: #C0392B; margin-bottom: 20px;
+}
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.updated { color: var(--muted); font-size: 14px; }
+
+/* CONTENT */
+.content { max-width: 760px; margin: 0 auto; padding: 24px 32px 80px; }
+.lede { font-size: 18px; color: var(--ink-soft); margin-bottom: 32px; line-height: 1.7; }
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px; font-weight: 400;
+  margin: 44px 0 14px; color: var(--ink);
+}
+p { margin-bottom: 14px; color: var(--ink-soft); }
+p strong, li strong { color: var(--ink); font-weight: 600; }
+ul, ol { margin: 0 0 18px 0; padding-left: 22px; }
+li { margin-bottom: 10px; color: var(--ink-soft); }
+li::marker { color: var(--emerald); }
+a { color: var(--emerald-dark); }
+a:hover { color: var(--emerald); }
+code {
+  background: var(--cream-dark);
+  padding: 3px 8px; border-radius: 6px;
+  font-size: 14px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--ink);
+}
+
+.steps {
+  background: var(--surface);
+  border: 1px solid rgba(29, 185, 84, 0.18);
+  border-left: 3px solid var(--emerald);
+  border-radius: 14px;
+  padding: 24px 26px;
+  margin: 20px 0 8px;
+}
+.steps ol { margin-bottom: 14px; }
+.steps p:last-child { margin-bottom: 0; }
+
+.mail-btn {
+  display: inline-block;
+  background: var(--emerald);
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 15px; font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 100px;
+  margin: 6px 0 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.mail-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 185, 84, 0.28);
+  color: #fff !important;
+}
+
+.notice {
+  background: var(--surface);
+  border: 1px solid rgba(231, 76, 60, 0.22);
+  border-left: 3px solid var(--warn);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 26px 0;
+}
+.notice p:last-child { margin-bottom: 0; }
+.notice-title {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #C0392B;
+  margin-bottom: 10px;
+}
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 14px;
+}
+.contact-card p { margin-bottom: 6px; }
+
+/* FOOTER */
+footer { padding: 56px 32px 36px; background: var(--ink); color: var(--cream); }
+.footer-container { max-width: 1200px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 30px; } }
+.footer-brand { max-width: 320px; }
+.footer-brand .logo { color: var(--cream); margin-bottom: 16px; }
+.footer-tagline { color: rgba(253,248,244,0.6); font-size: 14px; line-height: 1.6; }
+.footer-col h4 { font-family: 'DM Serif Display', serif; font-size: 16px; font-weight: 500; margin-bottom: 18px; color: var(--cream); }
+.footer-col a { display: block; color: rgba(253,248,244,0.6); text-decoration: none; font-size: 14px; margin-bottom: 12px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--emerald); }
+.footer-bottom {
+  padding-top: 28px; border-top: 1px solid rgba(253,248,244,0.1);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 14px; font-size: 13px; color: rgba(253,248,244,0.5);
+}
+
+@media (max-width: 600px) {
+  .nav-container { padding: 0 20px; }
+  .page-header { padding: 48px 20px 20px; }
+  .content { padding: 20px 20px 64px; }
+  .steps { padding: 20px; }
+}
 </style>
 </head>
 <body>
 
-<h1>Delete Your Heemu Account</h1>
-<p class="last-updated">Last Updated: July 24, 2026</p>
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="favicon/apple-touch-icon-180.png" alt="Heemu" class="logo-img">
+      Heemu
+    </a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </div>
+</nav>
 
-<p>This page explains how to request deletion of your Heemu account and the data associated with it. Heemu is developed by SAP-SHARKS.</p>
+<section class="page-header">
+  <div class="page-header-container">
+    <div class="page-badge">Account</div>
+    <h1>Delete Your Account</h1>
+    <p class="updated">Last updated: 2 August 2026</p>
+  </div>
+</section>
 
-<h2>How to request deletion</h2>
-<div class="steps">
-<ol>
-  <li>Send an email to <a href="mailto:support@sapsharks.com?subject=Delete%20my%20Heemu%20account">support@sapsharks.com</a></li>
-  <li>Use the subject line <code>Delete my Heemu account</code></li>
-  <li>Send it from the email address linked to the Quran.com account you use to sign in to Heemu, so we can verify the request</li>
-</ol>
-<p>We will confirm by email once your account has been deleted. Requests are processed within 30 days.</p>
+<div class="content">
+
+  <p class="lede">This page explains how to request deletion of your Heemu account and the data linked to it. You can start the request here, or from Settings inside the app.</p>
+
+  <h2>How to request deletion</h2>
+  <div class="steps">
+    <ol>
+      <li>Send an email to <a href="mailto:support@sapsharks.com?subject=Delete%20my%20Heemu%20account">support@sapsharks.com</a></li>
+      <li>Use the subject line <code>Delete my Heemu account</code></li>
+      <li>Send it from the email address linked to the Quran.com account you use to sign in to Heemu, so we can verify the request</li>
+    </ol>
+    <a class="mail-btn" href="mailto:support@sapsharks.com?subject=Delete%20my%20Heemu%20account&amp;body=Please%20delete%20my%20Heemu%20account%20and%20all%20data%20linked%20to%20it.">Email your deletion request</a>
+    <p>We will confirm by email once your account has been deleted. Requests are processed within 30 days.</p>
+  </div>
+
+  <h2>What gets deleted</h2>
+  <p>When your account is deleted, we permanently remove the following from our servers:</p>
+  <ul>
+    <li>Your profile record, including account identifiers received from Quran.com</li>
+    <li>Goals you created</li>
+    <li>Dhikr logs</li>
+    <li>Intervention events</li>
+    <li>The list of apps you had chosen to limit</li>
+  </ul>
+
+  <h2>What is kept</h2>
+  <p>We may retain limited records where we are required to do so by law, or anonymised statistics that cannot be linked back to you. Backups are purged on a rolling 30 day cycle, so a copy may persist in backups for up to 30 days after deletion.</p>
+
+  <h2>Data on your device</h2>
+  <div class="notice">
+    <div class="notice-title">Do both to remove everything</div>
+    <p>Your preferences, your selected app list, your screen time statistics and cached Quran content are stored on your phone. Uninstalling Heemu removes them.</p>
+    <p>Deleting your account does not remove data from your device, and uninstalling the app does not delete data from our servers. Do both if you want everything removed.</p>
+  </div>
+
+  <h2>Your Quran.com account</h2>
+  <p>Heemu does not control your Quran.com account. Deleting your Heemu account does not delete your Quran.com account. To do that, contact Quran.com directly.</p>
+
+  <h2>Contact</h2>
+  <div class="contact-card">
+    <p><strong>SAP-SHARKS</strong></p>
+    <p>Email: <a href="mailto:support@sapsharks.com">support@sapsharks.com</a></p>
+  </div>
+
 </div>
 
-<h2>What gets deleted</h2>
-<p>When your account is deleted, we permanently remove the following from our servers:</p>
-<ul>
-  <li>Your profile record, including account identifiers received from Quran.com</li>
-  <li>Goals you created</li>
-  <li>Dhikr logs</li>
-  <li>Intervention events</li>
-</ul>
-
-<h2>What is kept</h2>
-<p>We may retain limited records where we are required to do so by law, or anonymised statistics that cannot be linked back to you. Backups are purged on a rolling 30 day cycle, so a copy may persist in backups for up to 30 days after deletion.</p>
-
-<h2>Data on your device</h2>
-<p>Preferences, your selected app list, and cached content are stored on your phone. Uninstalling Heemu removes them. Deleting your account does not remove data from your device, and uninstalling the app does not delete data from our servers, so do both if you want everything removed.</p>
-
-<h2>Your Quran.com account</h2>
-<p>Heemu does not control your Quran.com account. Deleting your Heemu account does not delete your Quran.com account. To do that, contact Quran.com directly.</p>
-
-<div class="contact">
-<h2>Contact</h2>
-<p>
-  <strong>SAP-SHARKS</strong><br>
-  Email: <a href="mailto:support@sapsharks.com">support@sapsharks.com</a>
-</p>
-</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="favicon/apple-touch-icon-180.png" alt="Heemu" class="logo-img">
+          Heemu
+        </a>
+        <p class="footer-tagline">A digital wellness app for Muslims. Turn screen time into meaningful worship. Built with sincerity by SAP-SHARKS.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="delete-account.html">Delete Account</a>
+        <a href="mailto:support@sapsharks.com">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 SAP-SHARKS. Made with sincerity for the Ummah.</div>
+      <div>support@sapsharks.com</div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
