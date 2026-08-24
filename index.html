@@ -606,6 +606,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
       <a href="#how-it-works">How It Works</a>
       <a href="#features">Features</a>
       <a href="#gallery">Gallery</a>
+      <a href="#accessibility">Accessibility</a>
       <a href="#faq">FAQ</a>
       <a href="#download" class="nav-cta">Download free</a>
     </div>
@@ -756,8 +757,8 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
     <div class="features-with-phones">
       <div class="feature-block-content">
         <h3>&#x1F4CA; Track Your Progress</h3>
-        <p>See your dhikr count, day streak, screen time saved, and most limited apps in a beautiful calm dashboard. Small consistent steps build lasting habits.</p>
-        <p>The Prophet &#x2611;&#xFE0F; said: "The most beloved deeds to Allah are the most consistent, even if small."</p>
+        <p>See your dhikr count, day streak, daily screen time, and most limited apps in a beautiful calm dashboard. Small consistent steps build lasting habits.</p>
+        <p>The Prophet &#xFDFA; said: "The most beloved deeds to Allah are the most consistent, even if small."</p>
         <div class="feature-pills">
           <span class="feature-pill">22 Day Streak</span>
           <span class="feature-pill">647 Ayat Recited</span>
@@ -913,7 +914,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
             <div class="screen-permissions">
               <div class="perm-icon-big">&#x2699;&#xFE0F;</div>
               <div class="perm-title">Almost there!</div>
-              <div class="perm-subtitle">Enable these permissions so Heemu can detect and limit apps.</div>
+              <div class="perm-subtitle">Tap each one to see what it does before you turn it on.</div>
               <div class="perm-tile granted">
                 <div class="perm-tile-icon">&#x267F;</div>
                 <div class="perm-tile-text"><div class="perm-tile-name">Accessibility Service</div><div class="perm-tile-sub">Permission granted</div></div>
@@ -1058,7 +1059,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
             </div>
             <div class="stats-grid-mini">
               <div class="stat-mini"><div class="stat-mini-num">448</div><div class="stat-mini-label">Dhikr</div></div>
-              <div class="stat-mini"><div class="stat-mini-num">2.3h</div><div class="stat-mini-label">Saved</div></div>
+              <div class="stat-mini"><div class="stat-mini-num">647</div><div class="stat-mini-label">Ayat</div></div>
             </div>
             <div class="recent-row">
               <div class="recent-icon">&#x1F4FF;</div>
@@ -1072,6 +1073,54 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
   </div>
 </section>
 
+<!-- ACCESSIBILITY DISCLOSURE -->
+<section class="section" id="accessibility" style="background:var(--cream-deep);">
+  <div class="section-container" style="max-width:820px;">
+    <div class="section-eyebrow">Permissions</div>
+    <h2 class="section-title">How Heemu uses the <span class="accent">Accessibility Service</span>.</h2>
+    <p class="section-subtitle">Heemu asks for one sensitive Android permission. Here is exactly what it does, and what it does not.</p>
+
+    <div style="background:white;border:1px solid rgba(16,185,129,0.15);border-left:3px solid var(--emerald);padding:28px;margin-bottom:16px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">Why it is needed</h3>
+      <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;">
+        Heemu reads the name of the app that is currently open on your screen. This is the only way an app can tell when you open another app, and it is what makes the mindful pause possible. Without it, Heemu cannot know when to step in.
+      </p>
+    </div>
+
+    <div style="background:white;border:1px solid rgba(16,185,129,0.12);border-radius:18px;padding:28px;margin-bottom:16px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">What it reads</h3>
+      <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;">
+        Only the name of the app in the foreground, so it can be checked against the list of apps you picked yourself.
+      </p>
+    </div>
+
+    <div style="background:white;border:1px solid rgba(16,185,129,0.12);border-radius:18px;padding:28px;margin-bottom:16px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">What it never reads</h3>
+      <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;">
+        Your messages, your passwords, anything you type, or the content of any screen. Heemu does not record or capture your screen.
+      </p>
+    </div>
+
+    <div style="background:white;border:1px solid rgba(16,185,129,0.12);border-radius:18px;padding:28px;margin-bottom:16px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">Where it goes</h3>
+      <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;">
+        Nowhere. The app name is checked on your device and is never collected, stored on our servers, or shared with anyone.
+      </p>
+    </div>
+
+    <div style="background:white;border:1px solid rgba(16,185,129,0.12);border-radius:18px;padding:28px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">Your control</h3>
+      <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;margin-bottom:14px;">
+        Heemu is not an accessibility tool and is not built for users with disabilities. The service is never switched on by itself. You are asked inside the app first, you choose whether to agree, and you turn it on yourself in Android Settings. You can turn it off at any time, and Heemu keeps working without the pause feature.
+      </p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.7;">
+        Heemu also asks for Usage Access to show your daily screen time. That one is optional. Mindful pauses work without it, only the statistics will be missing. Full details are in our <a href="privacy.html" style="color:var(--olive-deep);">privacy policy</a>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="faq-container">
@@ -1079,15 +1128,15 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
     <h2 class="section-title">Frequently <span class="accent">asked</span>.</h2>
     <details class="faq-item">
       <summary class="faq-question">Is Heemu free?</summary>
-      <p class="faq-answer">Yes. Heemu is completely free to download and use. There are no ads, no in-app purchases, and no premium tiers. We built it as a sadaqah jariyah for the Ummah.</p>
+      <p class="faq-answer">Yes. Heemu is free to download and use, with no ads and no data selling. We built it as a sadaqah jariyah for the Ummah.</p>
     </details>
     <details class="faq-item">
       <summary class="faq-question">Does Heemu track what I do on my phone?</summary>
-      <p class="faq-answer">No. Heemu only detects when an app you have personally chosen to limit opens. We do not read your screen, your messages, or your keystrokes. Your data stays on your device.</p>
+      <p class="faq-answer">No. Heemu only detects when an app you have personally chosen to limit opens, and that check never leaves your phone. We do not read your screen, your messages, or your keystrokes, and we do not use analytics or tracking of any kind. Your dhikr and ayat counts are saved to your account so your progress survives a reinstall. Full details are in our <a href="privacy.html" style="color:var(--emerald);">privacy policy</a>.</p>
     </details>
     <details class="faq-item">
       <summary class="faq-question">Why does the app need Accessibility permission?</summary>
-      <p class="faq-answer">Android's Accessibility Service is the only way for an app to detect when another app opens. We use it strictly to show you a mindful pause when you open a distracting app. You can revoke it any time from your phone's settings.</p>
+      <p class="faq-answer">Android's Accessibility Service is the only way for an app to detect when another app opens. We use it strictly to show you a mindful pause when you open a distracting app.<br><br>It reads only the name of the app in front, so Heemu can check it against the list you picked yourself. It does not read your messages, your passwords, or anything you type, and it never records or captures your screen. Nothing read through this service is saved, sent to our servers, or shared with anyone.<br><br>You choose which apps trigger a pause, you switch the service on yourself in Android Settings, and you can revoke it at any time. <a href="#accessibility" style="color:var(--emerald);">Full details here</a>.</p>
     </details>
     <details class="faq-item">
       <summary class="faq-question">Will this work on iPhone?</summary>
@@ -1103,7 +1152,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
     </details>
     <details class="faq-item">
       <summary class="faq-question">Who made Heemu?</summary>
-      <p class="faq-answer">Heemu is built by UHUD LABS LLC, a small team of Muslim developers who believe technology should bring us closer to Allah, not farther. You can reach us at support@uhudlabs.com.</p>
+      <p class="faq-answer">Heemu is built by Uhud Labs LLC, a small team of Muslim developers who believe technology should bring us closer to Allah, not farther. You can reach us at support@uhudlabs.com.</p>
     </details>
   </div>
 </section>
@@ -1117,7 +1166,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
           <img src="favicon/apple-touch-icon-180.png" alt="Heemu" class="logo-img">
           Heemu
         </a>
-        <p class="footer-tagline">A digital wellness app for Muslims who want to reclaim their time and turn screen time into meaningful worship. Built with sincerity by UHUD LABS LLC.</p>
+        <p class="footer-tagline">A digital wellness app for Muslims who want to reclaim their time and turn screen time into meaningful worship. Built with sincerity by Uhud Labs.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
@@ -1141,12 +1190,13 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
       <div class="footer-col">
         <h4>Company</h4>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="#accessibility">Accessibility</a>
         <a href="mailto:support@uhudlabs.com">Contact</a>
         <a href="mailto:support@uhudlabs.com">Support</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&#169; 2026 UHUD LABS LLC. Made with sincerity for the Ummah.</div>
+      <div>&#169; 2026 Uhud Labs LLC. Made with sincerity for the Ummah.</div>
       <div>support@uhudlabs.com</div>
     </div>
   </div>
