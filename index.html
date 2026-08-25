@@ -630,7 +630,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
       </div>
       <div class="phone-mockup-wrapper">
         <div class="real-phone-frame hero-real-phone">
-          <img src="screenshots/dhikr_mode_action.gif" alt="Heemu app showing Dhikr counter" class="real-phone-screenshot">
+          <img src="screenshots/dhikr_mode_preview.png" alt="Heemu app showing Dhikr counter" class="real-phone-screenshot">
         </div>
       </div>
     </div>
@@ -651,9 +651,9 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
       <div class="stat-sub">turn distraction time into dhikr and Quran time</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">on device and private</div>
-      <div class="stat-sub">no tracking, no ads, no selling your data, ever</div>
+      <div class="stat-number">Zero</div>
+      <div class="stat-label">tracking, ads, or data selling</div>
+      <div class="stat-sub">we never record which apps you open, and we never sell your data</div>
     </div>
   </div>
   <div class="stats-disclaimer">
@@ -1083,7 +1083,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
     <div style="background:white;border:1px solid rgba(16,185,129,0.15);border-left:3px solid var(--emerald);padding:28px;margin-bottom:16px;">
       <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;">Why it is needed</h3>
       <p style="font-size:16px;color:var(--ink-soft);line-height:1.7;">
-        Heemu reads the name of the app that is currently open on your screen. This is the only way an app can tell when you open another app, and it is what makes the mindful pause possible. Without it, Heemu cannot know when to step in.
+        Heemu reads the name of the app that is currently open on your screen, so it can show the mindful pause at the exact moment you open an app you chose to limit.<br><br>Android can also report app usage after the fact, but those statistics arrive seconds late, once you are already scrolling. A pause that shows up then is useless. The Accessibility Service is the only way to catch that moment as it happens, which is why Heemu asks for it and nothing broader.
       </p>
     </div>
 
@@ -1136,7 +1136,7 @@ footer { padding: 60px 32px 40px; background: var(--ink); color: var(--cream); p
     </details>
     <details class="faq-item">
       <summary class="faq-question">Why does the app need Accessibility permission?</summary>
-      <p class="faq-answer">Android's Accessibility Service is the only way for an app to detect when another app opens. We use it strictly to show you a mindful pause when you open a distracting app.<br><br>It reads only the name of the app in front, so Heemu can check it against the list you picked yourself. It does not read your messages, your passwords, or anything you type, and it never records or captures your screen. Nothing read through this service is saved, sent to our servers, or shared with anyone.<br><br>You choose which apps trigger a pause, you switch the service on yourself in Android Settings, and you can revoke it at any time. <a href="#accessibility" style="color:var(--emerald);">Full details here</a>.</p>
+      <p class="faq-answer">Android's Accessibility Service is what tells Heemu which app has just come to the front, at the moment it happens. Android can also report app usage afterwards, but those numbers arrive seconds late, once you are already scrolling, so a pause built on them would always be too late. We use the service strictly to show you a mindful pause when you open a distracting app, and nothing else.<br><br>It reads only the name of the app in front, so Heemu can check it against the list you picked yourself. It does not read your messages, your passwords, or anything you type, and it never records or captures your screen. Nothing read through this service is saved, sent to our servers, or shared with anyone.<br><br>You choose which apps trigger a pause, you switch the service on yourself in Android Settings, and you can revoke it at any time. <a href="#accessibility" style="color:var(--emerald);">Full details here</a>.</p>
     </details>
     <details class="faq-item">
       <summary class="faq-question">Will this work on iPhone?</summary>
